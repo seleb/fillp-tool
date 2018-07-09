@@ -16,6 +16,7 @@
 	background: transparent;
 	border: none;
 	cursor: copy;
+	user-select: text;
 }
 .output>input:focus{
 	outline: none;
