@@ -15,9 +15,6 @@ module.exports = {
 				loader: 'babel-loader'
 			}
 		}, {
-			test: /\.strand$/,
-			use: "raw-loader"
-		}, {
 			test: /\.css$/, // stylesheets
 			use: [
 				'style-loader',
@@ -33,16 +30,7 @@ module.exports = {
 				}
 			]
 		}, {
-			test: /\.fnt\.(png||xml)$/, // bitmap fonts
-			use: {
-				loader: 'file-loader',
-				options: {
-					outputPath: 'assets/',
-					name: '[name].[ext]'
-				}
-			}
-		}, {
-			test: /(?<!\.fnt)\.(png|jpg|gif|svg|wav|ogg|mp3|frag|vert|xml|woff)$/, // assets, excluding bitmap fonts
+			test: /\.(png|woff)$/, // assets
 			use: {
 				loader: 'url-loader',
 				options: {
