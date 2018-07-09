@@ -16,6 +16,7 @@
 	background: transparent;
 	border: none;
 	cursor: copy;
+	text-overflow: ellipsis;
 	user-select: text;
 }
 .output>input:focus{
