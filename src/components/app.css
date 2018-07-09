@@ -1,0 +1,53 @@
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100%;
+	width: 100%;
+	background: #1d2b53;
+}
+
+.app>header {
+	box-sizing: border-box;
+	flex: none;
+	font-size: 120%;
+	padding: 1em;
+	width: 100%;
+	background: #ff004d;
+}
+
+.app>main {
+	flex: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.app>main>.grid {
+    align-content: center;
+	width: 32vh;
+}
+
+.app>main>.output {
+	margin-top: 1em;
+	flex: none;
+}
+
+.app>footer {
+	box-sizing: border-box;
+	flex: none;
+	font-size: 80%;
+	padding: 1em;
+	width: 100%;
+	background: #ff004d;
+	color: #7e2553;
+}
+
+.link::after {
+	color: #7e2553;
+	content: '|';
+	display: inline-block;
+}

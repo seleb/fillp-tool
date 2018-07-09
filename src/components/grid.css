@@ -1,0 +1,14 @@
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid > .cell {
+	border: solid 2px #5f574f;
+	background: #fff1e8;
+	padding-bottom: 100%;
+}
+
+.grid > .cell.on {
+	background: #000000;
+}
