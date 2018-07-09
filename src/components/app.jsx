@@ -15,6 +15,14 @@ export default class App extends Component {
 		for (var i = 0; i < 16; ++i) {
 			this.state.bits[Math.pow(2, i)] = false;
 		}
+		try {
+			this.state.bits = {
+				...this.state.bits,
+				...JSON.parse(localStorage.getItem('bits')),
+			};
+		} catch (error) {
+			console.error(error);
+		}
 	}
 
 	onGridChange = bit => {
@@ -24,6 +32,11 @@ export default class App extends Component {
 				[bit]: !this.state.bits[bit],
 			},
 		});
+		try {
+			localStorage.setItem('bits', JSON.stringify(this.state.bits));
+		} catch (error) {
+			console.error(error);
+		}
 	}
 
 	render({ }, {
