@@ -48,7 +48,20 @@ export default class App extends Component {
 					fillp tool
 				</header>
 				<main>
-					<Grid bits={bits} onChange={this.onGridChange} />
+					<div className="grids">
+						<Grid bits={bits} onChange={this.onGridChange} />
+						<div className="preview">
+							<Grid bits={bits} onChange={this.onGridChange} />
+							<Grid bits={bits} onChange={this.onGridChange} />
+							<Grid bits={bits} onChange={this.onGridChange} />
+							<Grid bits={bits} onChange={this.onGridChange} />
+							<Grid bits={bits} onChange={this.onGridChange} />
+							<Grid bits={bits} onChange={this.onGridChange} />
+							<Grid bits={bits} onChange={this.onGridChange} />
+							<Grid bits={bits} onChange={this.onGridChange} />
+							<Grid bits={bits} onChange={this.onGridChange} />
+						</div>
+					</div>
 					<Output bits={bits} />
 				</main>
 				<footer>

@@ -26,9 +26,26 @@
 	width: 100%;
 }
 
-.app>main>.grid {
+.app>main>.grids {
+	display: flex;
+}
+
+.app>main>.grids>.grid {
     align-content: center;
-	width: 32vh;
+}
+.app>main>.grids>.grid>.cell{
+	width: 8vh;
+}
+
+.app>main>.grids>.preview {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2px;
+	background: #5f574f;
+	margin-left: 1em;
+}
+.app>main>.grids>.preview>.grid>.cell{
+	width: 2vh;
 }
 
 .app>main>.output {
