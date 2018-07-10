@@ -28,24 +28,28 @@
 
 .app>main>.grids {
 	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .app>main>.grids>.grid {
-    align-content: center;
-}
-.app>main>.grids>.grid>.cell{
-	width: 8vh;
+	align-content: center;
+	width: 32vh;
+	height: 32vh;
+	border: solid 2px #5f574f;
 }
 
 .app>main>.grids>.preview {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 	grid-gap: 2px;
+	grid-auto-rows: min-content;
 	background: #5f574f;
+	border: solid 2px #5f574f;
 	margin-left: 1em;
-}
-.app>main>.grids>.preview>.grid>.cell{
-	width: 2vh;
+	width: 32vh;
+	height: 32vh;
 }
 
 .app>main>.output {
