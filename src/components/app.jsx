@@ -5,12 +5,14 @@ import Output from './output';
 import Link from './link';
 
 import './app.css';
+import ColourPicker from './ColourPicker';
 
 export default class App extends Component {
 	constructor() {
 		super();
 		this.state = {
 			bits: {},
+			colours: [0, 7],
 		};
 		for (var i = 0; i < 16; ++i) {
 			this.state.bits[Math.pow(2, i)] = false;
@@ -19,6 +21,10 @@ export default class App extends Component {
 			this.state.bits = {
 				...this.state.bits,
 				...JSON.parse(localStorage.getItem('bits')),
+			};
+			this.state.colours = {
+				...this.state.colours,
+				...JSON.parse(localStorage.getItem('colours')),
 			};
 		} catch (error) {
 			console.error(error);
@@ -39,9 +45,28 @@ export default class App extends Component {
 		}
 	}
 
+	setColour(idx, colour) {
+		this.setState({
+			colours: {
+				...this.state.colours,
+				[idx]: colour,
+			},
+		});
+		try {
+			localStorage.setItem('colours', JSON.stringify(this.state.colours));
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
 	render({ }, {
 		bits = {},
+		colours = {},
 	}) {
+		const {
+			'0': c1,
+			'1': c2,
+		} = colours;
 		return (
 			<div class="app">
 				<header>
@@ -49,20 +74,22 @@ export default class App extends Component {
 				</header>
 				<main>
 					<div className="grids">
-						<Grid bits={bits} onChange={this.onGridChange} />
+						<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
 						<div className="preview">
-							<Grid bits={bits} onChange={this.onGridChange} />
-							<Grid bits={bits} onChange={this.onGridChange} />
-							<Grid bits={bits} onChange={this.onGridChange} />
-							<Grid bits={bits} onChange={this.onGridChange} />
-							<Grid bits={bits} onChange={this.onGridChange} />
-							<Grid bits={bits} onChange={this.onGridChange} />
-							<Grid bits={bits} onChange={this.onGridChange} />
-							<Grid bits={bits} onChange={this.onGridChange} />
-							<Grid bits={bits} onChange={this.onGridChange} />
+							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
+							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
+							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
+							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
+							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
+							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
+							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
+							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
+							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
 						</div>
 					</div>
-					<Output bits={bits} />
+					<ColourPicker selected={c1} onClick={colour => this.setColour(0, colour)} />
+					<ColourPicker selected={c2} onClick={colour => this.setColour(1, colour)} />
+					<Output bits={bits} colours={colours} />
 				</main>
 				<footer>
 					Links:
