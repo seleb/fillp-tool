@@ -89,6 +89,7 @@ export default class App extends Component {
 					</div>
 					<ColourPicker selected={c1} onClick={colour => this.setColour(0, colour)} />
 					<ColourPicker selected={c2} onClick={colour => this.setColour(1, colour)} />
+					<hr />
 					<Output bits={bits} colours={colours} />
 				</main>
 				<footer>

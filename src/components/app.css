@@ -57,6 +57,11 @@
 	flex: none;
 }
 
+.app>main>hr {
+	border: solid 1px #5f574f;
+	width: 80%;
+}
+
 .app>footer {
 	box-sizing: border-box;
 	flex: none;
