@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/seleb/fillp-tool/compare/v1.4.1...v1.5.0) (2021-05-24)
+
+
+### Bug Fixes
+
+* state not being saved to `localStorage` properly ([f014c81](https://github.com/seleb/fillp-tool/commit/f014c81980109b92cf3b5eca426c5f09b2d58e78))
+
+
+### Features
+
+* improve layout ([fadc5ae](https://github.com/seleb/fillp-tool/commit/fadc5aef54dd52754f0009c7ee8bae71d326f633))
+* use dark browser color scheme ([bef7ea8](https://github.com/seleb/fillp-tool/commit/bef7ea847467752aa48ee8c61a2f7157abd74052))
+
 ## [1.4.1](https://github.com/seleb/fillp-tool/compare/v1.4.0...v1.4.1) (2021-05-24)
 
 
