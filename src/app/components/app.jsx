@@ -80,8 +80,8 @@ export default class App extends Component {
 						<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
 						<Grid tileX={3} tileY={3} colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
 					</div>
-					<ColourPicker selected={c1} onClick={colour => this.setColour(0, colour)} />
-					<ColourPicker selected={c2} onClick={colour => this.setColour(1, colour)} />
+					<ColourPicker group="background" selected={c1} onClick={colour => this.setColour(0, colour)} />
+					<ColourPicker group="fill" selected={c2} onClick={colour => this.setColour(1, colour)} />
 					<hr />
 					<Output bits={bits} colours={colours} />
 				</main>
