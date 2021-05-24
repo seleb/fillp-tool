@@ -36,11 +36,16 @@ export default class Output extends Component {
 		const coloursSum = c1+(c2<<4);
 		return (
 			<div class="output">
-				<label for="Hex">Hex Sum: </label><input name="Hex" onClick={this.copy} value={`0x${sum.toString(16)}`} />
-				<label for="Binary">Binary Sum: </label><input name="Binary" onClick={this.copy} value={`0b${sum.toString(2)}`} />
-				<label for="DecimalSum">Decimal Sum: </label><input name="DecimalSum" onClick={this.copy} value={sum < 32768 ? sum.toString(10) : 'N/A over 32768'} />
-				<label for="Decimal">Decimal Addition: </label><input name="Decimal" onClick={this.copy} value={onBits.join('+') || 0} />
-				<label for="color">Color: </label><input name="Color" onClick={this.copy} value={coloursSum} />
+				<label htmlFor="Hex">Hex Sum: </label>
+				<input id="Hex" name="Hex" onClick={this.copy} value={`0x${sum.toString(16)}`} />
+				<label htmlFor="Binary">Binary Sum: </label>
+				<input id="Binary" name="Binary" onClick={this.copy} value={`0b${sum.toString(2)}`} />
+				<label htmlFor="DecimalSum">Decimal Sum: </label>
+				<input id="DecimalSum" name="DecimalSum" onClick={this.copy} value={sum < 32768 ? sum.toString(10) : 'N/A over 32768'} />
+				<label htmlFor="Decimal">Decimal Addition: </label>
+				<input id="Decimal" name="Decimal" onClick={this.copy} value={onBits.join('+') || 0} />
+				<label htmlFor="color">Color: </label>
+				<input id="color" name="Color" onClick={this.copy} value={coloursSum} />
 				<div class="copy-notif">{copy}</div>
 			</div>
 		);

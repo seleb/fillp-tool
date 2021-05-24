@@ -25,6 +25,7 @@
 }
 
 .output>label {
+	cursor: copy;
 	color: #00e436;
 	padding: 0.5em;
 	text-align: right;
