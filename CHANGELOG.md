@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/seleb/fillp-tool/compare/v1.6.0...v1.6.1) (2021-05-24)
+
+
+### Bug Fixes
+
+* output labels not connected to inputs ([562f004](https://github.com/seleb/fillp-tool/commit/562f00419db16c84b4b48d173c66a4880f5e1e4a))
+
 # [1.6.0](https://github.com/seleb/fillp-tool/compare/v1.5.0...v1.6.0) (2021-05-24)
 
 
