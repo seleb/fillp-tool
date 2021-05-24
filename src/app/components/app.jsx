@@ -6,7 +6,7 @@ import Link from './link';
 import pkg from '../../../package.json';
 
 import './app.css';
-import ColourPicker from './ColourPicker';
+import ColourPicker from './colourpicker';
 
 export default class App extends Component {
 	constructor() {
