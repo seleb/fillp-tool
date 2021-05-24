@@ -1,5 +1,6 @@
 import 'babel-polyfill';
 import 'preact/debug';
+import 'reset-css';
 import './style';
 
 const loading = document.createElement('p');

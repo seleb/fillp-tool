@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "preact": "^10.5.13"
+    "preact": "^10.5.13",
+    "reset-css": "^5.0.1"
   },
   "release": {
     "plugins": [
