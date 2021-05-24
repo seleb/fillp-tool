@@ -1,3 +1,16 @@
+# [1.6.0](https://github.com/seleb/fillp-tool/compare/v1.5.0...v1.6.0) (2021-05-24)
+
+
+### Bug Fixes
+
+* indicate colour selection properly ([6fc7db9](https://github.com/seleb/fillp-tool/commit/6fc7db990437b8e6cff29c2355c0eab080999011))
+* keyboard interaction for colour selection ([b1094db](https://github.com/seleb/fillp-tool/commit/b1094db26cc579da445045facbe93dd611238c40))
+
+
+### Features
+
+* add accessible titles to colour selection ([eb87a7d](https://github.com/seleb/fillp-tool/commit/eb87a7d203e256b91d56c7820ff7977997797b52))
+
 # [1.5.0](https://github.com/seleb/fillp-tool/compare/v1.4.1...v1.5.0) (2021-05-24)
 
 
