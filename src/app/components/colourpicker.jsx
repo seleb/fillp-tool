@@ -1,8 +1,8 @@
 import { h, Component } from 'preact';
-import './link.css';
-import colours from './colours';
-
 import './colourpicker.css';
+import colours from './colours';
+import './link.css';
+
 
 export class Colour extends Component {
 	render({
@@ -11,9 +11,7 @@ export class Colour extends Component {
 		onClick,
 		group: name,
 	}) {
-		return <label class={`colour ${active ? 'active' : ''}`} style={{ background: colour }} >
-		<input type="radio" name={name} onClick={onClick} />
-		</label>
+		return <input type="radio" name={name} onClick={onClick} class={`${active ? 'active' : ''}`} style={{ background: colour }}  />
 	}
 }
 

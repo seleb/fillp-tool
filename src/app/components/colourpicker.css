@@ -1,24 +1,22 @@
 .colour-picker {
-	margin-top:.5em;
+	margin-top:.5rem;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 }
 
-.colour-picker>.colour {
-	width: 1.5em;
-	height: 1.5em;
+.colour-picker>input{
+	appearance: none;
+	width: 1.5rem;
+	height: 1.5rem;
 	display: inline-block;
 	padding: 0;
+	margin: 0;
 	border: solid 1px #5f574f;
 }
 
-.colour-picker>.colour.active {
+.colour-picker>input.active {
 	border-color: #fff1e8;
 	transform: scale(1.1);
-}
-
-.colour-picker>.colour>input{
-	display: none;
 }
