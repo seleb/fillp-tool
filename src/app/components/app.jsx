@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { h, Fragment, Component } from 'preact';
 
 import Grid from './grid';
 import Output from './output';
@@ -71,7 +71,7 @@ export default class App extends Component {
 			'1': c2,
 		} = colours;
 		return (
-			<div class="app">
+			<Fragment>
 				<header>
 					fillp tool
 				</header>
@@ -91,7 +91,7 @@ export default class App extends Component {
 					<Link url="https://www.lexaloffle.com/bbs/?tid=3760">font</Link>
 					<Link url="https://twitter.com/SeanSLeBlanc">contact</Link>
 				</footer>
-			</div>
+			</Fragment>
 		);
 	}
 }
