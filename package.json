@@ -1,6 +1,6 @@
 {
   "name": "fillp-tool",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Helper for creating PICO-8 fillp patterns",
   "author": "Sean S. LeBlanc <sean.s.leblanc@gmail.com>",
   "main": "./src/index.js",
