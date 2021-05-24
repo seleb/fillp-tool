@@ -33,31 +33,33 @@ export default class App extends Component {
 	}
 
 	onGridChange = bit => {
-		this.setState({
+		this.setState((s) => ({
 			bits: {
-				...this.state.bits,
-				[bit]: !this.state.bits[bit],
+				...s.bits,
+				[bit]: !s.bits[bit],
 			},
+		}), () => {
+			try {
+				localStorage.setItem('bits', JSON.stringify(this.state.bits));
+			} catch (error) {
+				console.error(error);
+			}
 		});
-		try {
-			localStorage.setItem('bits', JSON.stringify(this.state.bits));
-		} catch (error) {
-			console.error(error);
-		}
 	}
 
 	setColour(idx, colour) {
-		this.setState({
+		this.setState((s) => ({
 			colours: {
-				...this.state.colours,
+				...s.colours,
 				[idx]: colour,
 			},
+		}), () => {
+			try {
+				localStorage.setItem('colours', JSON.stringify(this.state.colours));
+			} catch (error) {
+				console.error(error);
+			}
 		});
-		try {
-			localStorage.setItem('colours', JSON.stringify(this.state.colours));
-		} catch (error) {
-			console.error(error);
-		}
 	}
 
 	render({ }, {
