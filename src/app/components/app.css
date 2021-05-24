@@ -61,7 +61,7 @@
 	color: #7e2553;
 }
 
-.link::after {
+.app>footer>*:not(:last-child)::after {
 	color: #7e2553;
 	content: '|';
 	display: inline-block;

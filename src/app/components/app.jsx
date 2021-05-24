@@ -3,6 +3,7 @@ import { h, Component } from 'preact';
 import Grid from './grid';
 import Output from './output';
 import Link from './link';
+import pkg from '../../../package.json';
 
 import './app.css';
 import ColourPicker from './ColourPicker';
@@ -83,7 +84,7 @@ export default class App extends Component {
 					<Output bits={bits} colours={colours} />
 				</main>
 				<footer>
-					Links:
+					<span>v{pkg.version}</span>
 					<Link url="https://www.lexaloffle.com/pico-8.php">pico-8</Link>
 					<Link url="https://www.lexaloffle.com/bbs/?tid=3760">font</Link>
 					<Link url="https://twitter.com/SeanSLeBlanc">contact</Link>
