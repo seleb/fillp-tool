@@ -75,17 +75,7 @@ export default class App extends Component {
 				<main>
 					<div className="grids">
 						<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
-						<div className="preview">
-							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
-							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
-							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
-							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
-							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
-							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
-							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
-							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
-							<Grid colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
-						</div>
+						<Grid tileX={3} tileY={3} colours={[c1,c2]} bits={bits} onChange={this.onGridChange} />
 					</div>
 					<ColourPicker selected={c1} onClick={colour => this.setColour(0, colour)} />
 					<ColourPicker selected={c2} onClick={colour => this.setColour(1, colour)} />
