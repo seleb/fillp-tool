@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/seleb/fillp-tool/compare/v1.4.0...v1.4.1) (2021-05-24)
+
+
+### Bug Fixes
+
+* issue with hover not appearing on drawing grid ([232a3ae](https://github.com/seleb/fillp-tool/commit/232a3ae5bd61403a5e29715c3615d0d4b3071081))
+
 # [1.4.0](https://github.com/seleb/fillp-tool/compare/v1.3.0...v1.4.0) (2021-05-24)
 
 
