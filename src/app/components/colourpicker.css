@@ -16,7 +16,7 @@
 	border: solid 1px #5f574f;
 }
 
-.colour-picker>input.active {
+.colour-picker>input:checked {
 	border-color: #fff1e8;
 	transform: scale(1.1);
 }
