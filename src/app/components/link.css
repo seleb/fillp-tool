@@ -2,3 +2,8 @@
 	text-decoration: none;
 	color: #ffccaa;
 }
+
+.link:hover,
+.link:focus {
+	color: #fff1e8;
+}
