@@ -1,34 +1,34 @@
 @font-face {
-	font-family: PICO-8;
-	src: url(./font/PICO-8.woff);
+  font-family: PICO-8;
+  src: url(./font/PICO-8.woff);
 }
 
 /* layout */
 
 html,
 body {
-	padding: 0;
-	margin: 0;
-	font-family: PICO-8, 'Courier New', Courier, monospace;
-	text-transform: uppercase;
-	color: #fff1e8;
-	line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  font-family: PICO-8, "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  color: #fff1e8;
+  line-height: 1.5;
 }
 
 html {
-	height: 100%;
-	background-color: #1d2b53;
-	color-scheme: dark;
+  height: 100%;
+  background-color: #1d2b53;
+  color-scheme: dark;
 }
 
 body {
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 * {
-	user-select: none;
+  user-select: none;
 }

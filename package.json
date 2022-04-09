@@ -4,29 +4,27 @@
   "version": "1.6.2",
   "description": "Helper for creating PICO-8 fillp patterns",
   "author": "Sean S. LeBlanc <sean.s.leblanc@gmail.com>",
-  "main": "./src/index.js",
   "license": "MIT",
   "repository": "github:seleb/fillp-tool",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "npm run build:cleanup && npm run build:parcel && npm run build:sw",
-    "build:cleanup": "rm -rf .cache && rm -rf docs",
-    "build:parcel": "parcel build index.html -d docs --no-source-maps --public-url ./",
+    "start": "vite dev",
+    "build": "npm run build:cleanup && npm run build:vite && npm run build:sw",
+    "build:cleanup": "rm -rf docs",
+    "build:vite": "vite build",
     "build:sw": "workbox generateSW",
     "postversion": "npm run build"
   },
-  "devDependencies": {
-    "autoprefixer": "^9.0.0",
-    "parcel": "^1.12.4",
-    "parcel-bundler": "^1.12.5",
-    "typescript": "^4.2.4",
-    "workbox-cli": "^6.1.5"
-  },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
     "draw-1-bit": "^1.1.1",
-    "preact": "^10.5.13",
+    "preact": "^10.7.1",
     "reset-css": "^5.0.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.2.0",
+    "rollup-plugin-visualizer": "^5.6.0",
+    "typescript": "^4.2.4",
+    "vite": "^2.9.1",
+    "workbox-cli": "^6.1.5"
   },
   "release": {
     "plugins": [
