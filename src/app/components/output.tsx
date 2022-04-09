@@ -1,17 +1,19 @@
-import { h, Component } from "preact";
+import { Component, h } from "preact";
+import App from "./app";
 import "./output.css";
 
-export default class Output extends Component {
+export default class Output extends Component<App["state"], { copy?: string }> {
   constructor() {
     super();
     this.state = {
       copy: undefined,
     };
   }
-  copy = (event) => {
-    event.target.select();
+  copy = (event: MouseEvent) => {
+    const input = event.currentTarget as HTMLInputElement;
+    input.select();
     document.execCommand("copy");
-    event.target.blur();
+    input.blur();
     clearTimeout(this.copyNotifTimeout);
     this.copyNotifTimeout = setTimeout(() => {
       this.setState({
@@ -19,10 +21,13 @@ export default class Output extends Component {
       });
     }, 1000);
     this.setState({
-      copy: `${event.target.name} copied!`,
+      copy: `${input.name} copied!`,
     });
   };
-  render({ bits = {}, colours: { "0": c1, "1": c2 } = {} }, { copy = "" }) {
+  render(
+    { bits = {}, colours: [c1, c2] = [0, 7] }: Output["props"],
+    { copy = "" }: Output["state"]
+  ) {
     const onBits = Object.entries(bits)
       .filter(([_, on]) => on)
       .map(([bit]) => bit);

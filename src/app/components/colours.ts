@@ -15,4 +15,4 @@ export default [
 	'#83769c',
 	'#ff77a8',
 	'#ffccaa',
-];
+] as const;

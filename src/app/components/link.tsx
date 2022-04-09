@@ -1,12 +1,16 @@
-import { h, Component } from "preact";
+import { ComponentChildren, h } from "preact";
 import "./link.css";
 
-export default class Link extends Component {
-  render({ url = "", children }) {
-    return (
-      <a class="link" href={url}>
-        {children}
-      </a>
-    );
-  }
+export default function Link({
+  url = "",
+  children,
+}: {
+  url: string;
+  children: ComponentChildren;
+}) {
+  return (
+    <a class="link" href={url}>
+      {children}
+    </a>
+  );
 }
