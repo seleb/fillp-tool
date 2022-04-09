@@ -1,3 +1,14 @@
+## [1.6.3](https://github.com/seleb/fillp-tool/compare/v1.6.2...v1.6.3) (2022-04-09)
+
+
+### Bug Fixes
+
+* better storage mechanism ([345f863](https://github.com/seleb/fillp-tool/commit/345f863370efb82addcde0d2f892e422f68b1f35))
+* colour picker hover/focus style ([f503c49](https://github.com/seleb/fillp-tool/commit/f503c499d1618b44d8e3f0b49b9fcb330e454bdf))
+* link hover/focus style ([b362c23](https://github.com/seleb/fillp-tool/commit/b362c23e6f5712a7154101707600190f3311f1cf))
+* optimize build ([d008c5c](https://github.com/seleb/fillp-tool/commit/d008c5c48dfed617e2b10778ed6c884fccab87c7))
+* output hover/focus style ([e5f3afc](https://github.com/seleb/fillp-tool/commit/e5f3afcea6f49cf27312bb9d122d56c39fc0be59))
+
 ## [1.6.2](https://github.com/seleb/fillp-tool/compare/v1.6.1...v1.6.2) (2021-05-24)
 
 

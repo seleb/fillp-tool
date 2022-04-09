@@ -1,1 +1,30 @@
-{"short_name":"fillp-tool","name":"fillp-tool","icons":[{"src":"icon.0f2d189a.png","type":"image/png","sizes":"32x32","purpose":"maskable any"},{"src":"icon_192.92eb2cd4.png","type":"image/png","sizes":"192x192","purpose":"maskable any"},{"src":"icon_256.ecbdb05f.png","type":"image/png","sizes":"256x256","purpose":"maskable any"},{"src":"icon_512.529e79e7.png","type":"image/png","sizes":"512x512","purpose":"maskable any"}],"display":"standalone","orientation":"any","theme_color":"#1d2b53","background_color":"#1d2b53","start_url":"."}
+{
+	"short_name": "fillp-tool",
+	"name": "fillp-tool",
+	"icons": [{
+		"src": "./icon.png",
+		"type": "image/png",
+		"sizes": "32x32",
+		"purpose": "maskable any"
+	}, {
+		"src": "./icon_192.png",
+		"type": "image/png",
+		"sizes": "192x192",
+		"purpose": "maskable any"
+	}, {
+		"src": "./icon_256.png",
+		"type": "image/png",
+		"sizes": "256x256",
+		"purpose": "maskable any"
+	}, {
+		"src": "./icon_512.png",
+		"type": "image/png",
+		"sizes": "512x512",
+		"purpose": "maskable any"
+	}],
+	"display": "standalone",
+	"orientation": "any",
+	"theme_color": "#1d2b53",
+	"background_color": "#1d2b53",
+	"start_url": "."
+}
