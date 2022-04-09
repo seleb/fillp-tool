@@ -1,14 +1,19 @@
-import { h, Fragment, Component } from "preact";
-
-import Grid from "./grid";
-import Output from "./output";
-import Link from "./link";
+import localforage from "localforage";
+import { Component, Fragment, h } from "preact";
 import pkg from "../../../package.json";
-
 import "./app.css";
 import ColourPicker from "./colourpicker";
+import Grid from "./grid";
+import Link from "./link";
+import Output from "./output";
 
-export default class App extends Component {
+export default class App extends Component<
+  never,
+  {
+    bits: { [key: number]: boolean };
+    colours: [number, number];
+  }
+> {
   constructor() {
     super();
     this.state = {
@@ -18,21 +23,33 @@ export default class App extends Component {
     for (var i = 0; i < 16; ++i) {
       this.state.bits[Math.pow(2, i)] = false;
     }
-    try {
-      this.state.bits = {
-        ...this.state.bits,
-        ...JSON.parse(localStorage.getItem("bits")),
-      };
-      this.state.colours = {
-        ...this.state.colours,
-        ...JSON.parse(localStorage.getItem("colours")),
-      };
-    } catch (error) {
-      console.error(error);
-    }
   }
 
-  onGridChange = (bit) => {
+  componentDidMount = () => {
+    Promise.all([
+      localforage.getItem<typeof this.state["bits"]>("bits"),
+      localforage.getItem<typeof this.state["colours"]>("colours"),
+    ]).then(([bits, colours]) => {
+      this.setState((state) => {
+        const newState = { ...state };
+        newState.bits = {
+          ...newState.bits,
+          ...bits,
+        };
+        if (colours) {
+          if (colours.length > 0) {
+            newState.colours[0] = colours[0];
+          }
+          if (colours.length > 1) {
+            newState.colours[1] = colours[1];
+          }
+        }
+        return newState;
+      });
+    });
+  };
+
+  onGridChange = (bit: number) => {
     this.setState(
       (s) => ({
         bits: {
@@ -41,34 +58,31 @@ export default class App extends Component {
         },
       }),
       () => {
-        try {
-          localStorage.setItem("bits", JSON.stringify(this.state.bits));
-        } catch (error) {
-          console.error(error);
-        }
+        localforage.setItem("bits", this.state.bits).catch((err) => {
+          console.error(err);
+        });
       }
     );
   };
 
-  setColour(idx, colour) {
+  setColour(idx: number, colour: number) {
     this.setState(
-      (s) => ({
-        colours: {
-          ...s.colours,
-          [idx]: colour,
-        },
-      }),
+      (s) => {
+        const newState = { ...s };
+        [...s.colours];
+        newState.colours = [...newState.colours];
+        newState.colours[idx] = colour;
+        return newState;
+      },
       () => {
-        try {
-          localStorage.setItem("colours", JSON.stringify(this.state.colours));
-        } catch (error) {
-          console.error(error);
-        }
+        localforage.setItem("colours", this.state.colours).catch((err) => {
+          console.error(err);
+        });
       }
     );
   }
 
-  render({}, { bits = {}, colours = {} }) {
+  render(_: App["props"], { bits = {}, colours = [0, 7] }: App["state"]) {
     const { "0": c1, "1": c2 } = colours;
     return (
       <Fragment>
@@ -87,12 +101,12 @@ export default class App extends Component {
           <ColourPicker
             group="background"
             selected={c1}
-            onClick={(colour) => this.setColour(0, colour)}
+            onClick={(colour: number) => this.setColour(0, colour)}
           />
           <ColourPicker
             group="fill"
             selected={c2}
-            onClick={(colour) => this.setColour(1, colour)}
+            onClick={(colour: number) => this.setColour(1, colour)}
           />
           <hr />
           <Output bits={bits} colours={colours} />

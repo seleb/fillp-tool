@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "draw-1-bit": "^1.1.1",
+    "localforage": "^1.10.0",
     "preact": "^10.7.1",
     "reset-css": "^5.0.1"
   },
