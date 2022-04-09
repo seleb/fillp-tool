@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/seleb/fillp-tool/compare/v1.6.3...v1.6.4) (2022-04-09)
+
+
+### Bug Fixes
+
+* missing build files ([8e1c529](https://github.com/seleb/fillp-tool/commit/8e1c5296258e79645ced5bcd4f8484462bd4e5ef))
+
 ## [1.6.3](https://github.com/seleb/fillp-tool/compare/v1.6.2...v1.6.3) (2022-04-09)
 
 
