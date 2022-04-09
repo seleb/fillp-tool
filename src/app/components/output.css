@@ -20,6 +20,11 @@
 	user-select: text;
 }
 
+.output>input:hover,
+.output>input:focus {
+	color: #83769c;
+}
+
 .output>input:focus {
 	outline: none;
 }
@@ -29,6 +34,11 @@
 	color: #00e436;
 	padding: 0.5em;
 	text-align: right;
+}
+
+.output>label:hover,
+.output>label:focus {
+	color: #008751;
 }
 
 .output>.copy-notif {
