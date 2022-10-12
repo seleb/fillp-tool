@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": "github:seleb/fillp-tool",
   "scripts": {
-    "start": "vite dev",
+    "start": "vite dev --port 80",
     "build": "npm run build:cleanup && npm run build:vite && npm run build:sw",
     "build:cleanup": "rm -rf docs",
     "build:vite": "vite build",
