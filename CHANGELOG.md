@@ -1,3 +1,10 @@
+## [1.6.5](https://github.com/seleb/fillp-tool/compare/v1.6.4...v1.6.5) (2022-10-12)
+
+
+### Bug Fixes
+
+* reverse state + update initial colours to match PICO-8 ([9bc1432](https://github.com/seleb/fillp-tool/commit/9bc1432561db0baa3e95f48a9ea9cbf783a27834))
+
 ## [1.6.4](https://github.com/seleb/fillp-tool/compare/v1.6.3...v1.6.4) (2022-04-09)
 
 
