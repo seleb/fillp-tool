@@ -18,10 +18,10 @@ export default class App extends Component<
     super();
     this.state = {
       bits: {},
-      colours: [0, 7],
+      colours: [6, 0],
     };
     for (var i = 0; i < 16; ++i) {
-      this.state.bits[Math.pow(2, i)] = false;
+      this.state.bits[Math.pow(2, i)] = true;
     }
   }
 
